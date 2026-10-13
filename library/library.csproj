@@ -8,10 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Books\Delete.cshtml" />
     <Content Remove="Views\Books\Edit.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="Views\Books\Delete.cshtml" />
     <Compile Include="Views\Books\Edit.cshtml" />
   </ItemGroup>
 
