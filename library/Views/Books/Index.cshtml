@@ -1,10 +1,14 @@
-﻿
+﻿@model IEnumerable<library.Models.Book>
+
 <a asp-action="Create" class="btn btn-primary">Add a book</a>
 
-<a asp-action="Edit"
-   asp-route-id="@book.BookId"
-   class="btn btn-sm btn-outline-secondary">Edit</a>
+@foreach (var item in Model)
+{
+    <a asp-action="Edit"
+       asp-route-id="@item.BookId"
+       class="btn btn-sm btn-outline-secondary">Edit</a>
 
-<a asp-action="Delete"
-   asp-route-id="@book.BookId"
-   class="btn btn-sm btn-outline-danger">Delete</a>
+    <a asp-action="Delete"
+       asp-route-id="@item.BookId"
+       class="btn btn-sm btn-outline-danger">Delete</a>
+}
